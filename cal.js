@@ -31,13 +31,14 @@ const display = document.getElementById("display");
 const clearBtn = document.getElementById("clear");
 const buttons = document.querySelectorAll(".btn"); // Get all buttons
 
-for (let i = 0; i < buttons.length; i++) {
-    let btn = buttons[i]; // Get each button
-    btn.addEventListener("click", function () {
-        const value = btn.getAttribute("data-value");
-        display.value += value; // Add clicked value to display
-    });
-}
+
+// for (let i = 0; i < buttons.length; i++) {
+//     let btn = buttons[i]; // Get each button
+//     btn.addEventListener("click", function () {
+//         const value = btn.getAttribute("data-value");
+//         display.value += value; // Add clicked value to display
+//     });
+// }
 
 
 // buttons.forEach(btn => {
@@ -60,3 +61,35 @@ for (let i = 0; i < buttons.length; i++) {
 //     display.value += value; // Add it to the display
 //   });
 // });
+
+//const buttons = document.querySelectorAll(".btn");
+//const display = document.getElementById("display");
+
+let currentInput = "";
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const value = button.getAttribute("data-value");
+
+    if (value === "=") {
+      try {
+        currentInput = eval(currentInput);
+        display.value = currentInput;
+      } catch {
+        display.value = "Error";
+        currentInput = "";
+      }
+    } else if (value === "C") {
+      currentInput = "";
+      display.value = "";
+    } else {
+      currentInput += value;
+      display.value = currentInput;
+    }
+  });
+});
+
+
+function evaluate() {
+    
+};

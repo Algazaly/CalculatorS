@@ -1,84 +1,60 @@
-/*body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+* {
   margin: 0;
   padding: 0;
-}
-
-.unit-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.input-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-}
-
-.unit-input {
-  display: flex;
-  flex-direction: column;
-}
-
-.unit-input label {
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #444;
-}
-
-.unit-input input {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}*/
-
-* {
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box; /* helps with consistent sizing */
 }
 
 body {
-    
-    background-color: yellowgreen;
-    
-    
+  background-color: yellowgreen;
+  display: flex;             /* center the content horizontally */
+  justify-content: center;
+  align-items: center;       /* center the content vertically */
+  height: 100vh;             /* full height of screen */
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
 form {
-    max-width: 200px;
-    border: 2px solid white;
-    text-align: center;
-    
-    
-
+  max-width: 300px;
+  width: 100%;
+  border: 2px solid white;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+h1 {
+  color: black;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+
 input {
-   width: 100%;
-   padding: 0 0 60 0;
-
-
+  width: 100%;
+  padding: 30px;
+  border: none;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: right;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
 }
 
 button {
-    padding: 10px 15px 20px 13px;
-    font-size: larger;
-    text-align: left;
-  
-  
+  padding: 10px 15px;
+  font-size: 1.1em;
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightgray;
+  cursor: pointer;
 }
 
-.reset {
-    text-align: right;
+button:hover {
+  background-color: gray;
+  color: white;
 }
+
+
